@@ -1,0 +1,281 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;500&family=Nunito+Sans:wght@200;600&family=Rajdhani:wght@300&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    height:100vh;
+    font-family: "Nunito sans";
+}
+ul{
+    padding: 0;
+    margin:0;
+    list-style-type: none;
+}
+.container-body{
+    height: 90vh;
+}
+/* List alanı*/
+.list-container{
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FEFEFE;
+}
+.list-in-container{
+    width:450px;
+    height:90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    padding:18px;
+    overflow-y: scroll;
+}
+.list-card{
+    width:100%;
+    height: 70%;
+    margin-bottom:5px;
+}
+.list-card-header{
+    display: flex;
+    justify-content: center;
+    width:100%;
+    height: 90px;
+    padding: 0px 20px;
+    margin-bottom:2px;
+    box-sizing: border-box;
+}
+.list-card-header .list-card-header-fl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:35%;
+    height: 90px;
+}
+.list-card-header .list-card-header-fl img{
+    width:72px;
+    height: 75.4;
+    border-radius: 8px;
+    box-shadow: 2px 5px 7px rgba(0,0,0,.5);
+}
+.list-card-header .list-card-header-sl{
+    padding:5px 10px;
+    box-sizing: border-box;
+    width:65%;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+}
+.list-card-header-sl span{
+    color:#64738c;
+    font-size:12px;
+}
+.list-card-header .list-card-header-sl .rates{
+    display: flex;
+    flex-direction: row;
+}
+.rates .fa-solid{
+    font-size:12px;
+}
+.rates .fa-solid{
+    font-size:12px;
+}
+.rates .fa-star{
+    color:#ecd03f;
+}
+.rates .fa-location-dot{
+    color: #0dafc0;
+}
+.list-card-footer{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.list-card-footer button{
+    border:none;
+    background: none;
+    color: #e82223;
+    outline:none;
+    letter-spacing: 2px;
+    font-size:12px;
+    padding: 8px 16px;
+}
+.list-card-footer button:hover{
+    cursor: pointer;
+}
+.list-card-footer button .fa-bag-shopping{
+    padding-right: 15px;
+    font-size:14px;
+}
+.list-description{
+    width:100%;
+    height:30%;
+}
+.list-description span{
+    width:100%;
+    height:30%;
+    font-size:14px;
+}
+/*Account Alanı*/
+
+
+.account-container{
+    background-color: #fefefe;
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.account-in-container{
+    width:327px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    padding:18px;
+}
+.account-in-container div{
+    margin:15px 0px;
+}
+.account-in-container div:first-child{
+    margin:0px 0px;
+}
+.account-text{
+    width: 100%;
+    text-align: left;
+}
+.epl-input{
+    display: flex;
+    flex-direction: column;
+    width: 327px;
+    height: 56px;
+    position: relative;
+}
+.epl-input input{
+    width: calc(327px-320px);
+    height: 56px;
+    background:none;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    z-index: 99;
+    outline:none;
+    border-bottom:1px solid gray;
+}
+.epl-input span{
+    position: absolute;
+    z-index:98;
+    bottom:18px;
+    font-size:16px;
+    left:2px;
+    opacity:.5;
+}
+.epl-input .locale-text{
+    font-size:16px;
+    opacity:.5;
+}
+.epl-input select{
+    width: 327px;
+    height: 56px;
+    background:none;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    outline:none;
+    border-bottom:2px solid gray;
+}
+.epl-input select > option{
+    border:none;
+    color:black;
+    background-color: #ecf0f1;
+}
+.epl-input select > option:hover{
+    border:none;
+    color:black;
+    background-color: red;
+}
+.epl-input select:focus{
+    width: calc(327px-320px);
+    height: 56px;
+    background:none;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    z-index: 99;
+    outline:none;
+    border-color:#67ccd7;
+}
+.clicked-field{
+    width:100%;
+}
+.userName{
+    font-size:40px;
+    font-weight: 800;
+}
+.sign-button{
+    width: 327px;
+    height: 56px;
+    margin-top:20px;
+    border-radius: 12px;
+    border:none;
+    background-color: #E82223;
+    color:#FEF2F2;
+    cursor:pointer;
+}
+.sign-button:focus{
+    width: 327px;
+    height: 56px;
+    border-radius: 12px;
+    border:none;
+    background-color: #BBC3CF;
+    color:#FEF2F2;
+    cursor:pointer; 
+}
+.log-out-button{
+    width: 327px;
+    height: 56px;
+    margin-top:20px;
+    border-radius: 12px;
+    border:1px solid #E82223;
+    background-color: white;
+    color:#E82223;
+    cursor:pointer;
+    position: absolute;
+    bottom:10px;
+}
+.sticky-menu{
+    height: 10vh;
+    background-color: #e5e5e5;
+    width:100%;
+    position: sticky;
+    top:90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ul li {
+    color: #4c4c4c;
+    display: inline-block;
+    margin-left:25px;
+}
+ul li:hover {
+    cursor: pointer;
+}
+.fa-solid{
+    font-size: 18px;
+}
+.center-the-menu{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.center-the-menu > span{
+    margin-top:5px;
+}

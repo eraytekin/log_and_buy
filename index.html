@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapu.com Front-End</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="big-container">
+        <div class="container-body">
+            <div class="list-container" v-show="showList">
+                <div class="list-in-container">
+                    <div class="list-card" v-for="addToBag in addToBagCount">
+                        <div class="list-card-header">
+                            <div class="list-card-header-fl">
+                                <img src="./otel.jpg"/>
+                            </div>
+                            <div class="list-card-header-sl">
+                                <b>{{  addToBag.tHeader }}</b>
+                                <span>{{ addToBag.tCont }}</span>
+                                <div class="rates">
+                                    <div><i class="fa-solid fa-star"></i> <span>{{ addToBag.tStar }}</span></div>&nbsp;&nbsp;&nbsp;
+                                    <div><i class="fa-solid fa-location-dot"></i>  <span>{{ addToBag.tLocate }}</span></div> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-card-footer">
+                            <button><i class="fa-solid fa-bag-shopping"></i>SEPETE EKLE </button>
+                        </div>
+                    </div>
+                    
+                    <hr color="#ecf0f1" width="400">
+
+                    <div class="list-description">
+                            <h2>Ürünlerin Toplamı : </h2>
+                            <span>Toplam : 124.35 TL</span><br>
+                            <span>Vergiler + kargo : 21.45 TL</span>
+                            <h3>Genel Toplam : 145.8 TL</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="account-container" v-show="showAccount">
+                <div class="account-in-container">
+                    <div class="not-clicked-field" v-if="showClicked == false">
+                        <div class="account-text">
+                            <h1>Account</h1>
+                        </div>
+                        <div class="epl-input" >
+                            <span id="span1">E-mail Giriniz</span>
+                            <input type="text" v-model="textEmail" onfocus="startThat1(this)"/>
+                        </div>
+                        <div class="epl-input" >
+                            <span id="span2">Password Giriniz</span>
+                            <input type="password" v-model="textPassword" onfocus="startThat2(this)"/>
+                        </div>
+                    </div>
+                    <div class="clicked-field" v-if="showClicked == true">
+                        <div class="account-text">
+                            <h1>Account</h1>
+                        </div>
+                        <div>
+                            <div class="userName">{{ userName }}</div><br>
+                            <b>E-mail : {{ textEmail }}</b><br>
+                            <b>password : {{ textPassword }}</b><br>
+                            <b>Location : {{ textLocate }}</b>
+                        </div>
+                    </div>
+                    
+                    <hr v-if="showClicked == true" width="300" color="#ecf0f1">
+                    <div class="epl-input">
+                        <div class="locale-text">Locale</div>
+                        <select v-model="textLocate">
+                            <option selected="textLocate" :value="loc" v-for="loc in allLocate">{{loc}}</option>
+                        </select>
+                    </div>
+                    <button class="sign-button" @click="showClickedField" v-if="showClicked==false">Sign Up</button>
+                    <button class="log-out-button" @click="logOutField" v-if="showClicked==true">Log Out</button>
+                </div>
+            </div>
+        </div>
+        <div class="sticky-menu">
+            <ul class="menu">
+                <li @click="listFonk">
+                    <div class="center-the-menu">
+                        <i class="fa-solid fa-list"></i>
+                        <span>List</span>
+                    </div>
+                </li>
+                <li @click="accountFonk">
+                    <div class="center-the-menu">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Account</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="script.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>
